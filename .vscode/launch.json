@@ -1,0 +1,11 @@
+{
+	"configurations": [
+		{
+			"name": "Social Responsibility",
+			"request": "launch",
+			"type": "msedge",
+			"url": "http://localhost:8080",
+			"webRoot": "${workspaceFolder}/public"
+		}
+	]
+}

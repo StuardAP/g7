@@ -1,0 +1,10 @@
+.header_section {
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	background-color: #f7f7f7;
+}
+
+.custom_nav-container {
+	padding: .5rem 0;
+}

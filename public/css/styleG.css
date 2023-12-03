@@ -1,0 +1,123 @@
+.video-gallery-container {
+	width: 900px;
+	padding: 8px 0 0 0;
+	margin: 0 auto;
+	border-radius: 1.1rem;
+	box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+
+}
+
+.video-gallery-container,
+.video-gallery-container * {
+	box-sizing: border-box;
+	border-radius: 1.1rem;
+}
+
+.video-gallery-container .video-gallery {
+	display: flex;
+	border-color: rgb(121, 111, 99);
+	justify-content: center;
+	padding: 16px;
+	padding-top: 24px;
+	gap: 24px;
+	color: #fff;
+}
+
+.video-gallery h3.video-title {
+	line-height: 1.6;
+	font-weight: 700;
+	font-size: 20px;
+	width: 100%;
+	color: black;
+}
+
+.video-gallery .thumbnail {
+	height: 120px;
+	width: 200px;
+	cursor: pointer;
+	float: left;
+    object-fit: cover;
+}
+
+.video-gallery .video {
+	position: relative;
+}
+
+.video-gallery .video:hover .play-icon {
+	opacity: 1;
+}
+
+.video-gallery .play-icon {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	pointer-events: none;
+	opacity: 0;
+	transition: opacity 400ms ease;
+}
+
+.video-gallery .video .play-icon img {
+	height: 50px;
+	width: 50px;
+}
+
+.video-gallery .all-videos {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.video-gallery .responsive-iframe {
+	position: relative;
+	height: 0;
+	overflow: hidden;
+	padding-top: 56.25%;
+	padding-bottom: 30px;
+}
+
+.video-gallery .responsive-iframe iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+@media (max-width: 900px) {
+	.video-gallery-container {
+		width: 100%;
+	}
+}
+
+@media (max-width: 700px) {
+	.video-gallery-container .video-gallery {
+		flex-direction: column;
+	}
+
+	.video-gallery .all-videos {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.video-gallery .thumbnail {
+		height: unset;
+		width: 100%;
+	}
+}
+
+@media (max-width: 500px) {
+	.video-gallery .all-videos {
+		grid-template-columns: 1fr;
+	}
+
+	.video-gallery-container {
+		max-width: 400px;
+	}
+
+	.video-gallery-container h2.title {
+		font-size: 24px;
+		font-weight: bold;
+	}
+}

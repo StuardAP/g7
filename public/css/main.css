@@ -1,0 +1,11 @@
+.main-banner {
+	border-radius: 1rem;
+}
+
+.slider_img-box {
+	width: 100%;
+}
+
+.slider_section:nth-child(even) {
+	background-color: #f7f7f7;
+}

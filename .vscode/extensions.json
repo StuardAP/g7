@@ -1,0 +1,8 @@
+{
+	"recommendations": [
+		"dbaeumer.vscode-eslint",
+		"usernamehw.errorlens",
+		"amatiasq.sort-imports",
+		"aaron-bond.better-comments"
+	]
+}
