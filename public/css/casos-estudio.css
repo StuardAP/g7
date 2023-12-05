@@ -322,8 +322,77 @@ a:focus {
 .service_section .card .card-img-top-2 {
 	width: 100%;
 	margin: 0px;
+	transition: transform 0.3s ease-in-out;
+
+
 }
 
+.service_section .card .flipper {
+	position: relative;
+	width: 200px;
+	height: 200px;
+	transform-style: preserve-3d;
+	transition: transform 0.5s;
+
+}
+.service_section .card2 .flipper .front {
+	z-index: 20;
+}
+.service_section .card2 .flipper .front .cap {
+text-align: center;}
+
+.service_section .card2 .flipper .front img {
+	width: 90%; /* Asegura que la imagen llena el contenedor */
+	margin-right: 25	px;
+}
+.service_section .card2 .flipper {
+	position: relative;
+	width: 100%;
+	height: 200px;
+	transform-style: preserve-3d;
+	transition: transform 0.5s;
+
+}
+
+
+.service_section .card2 .flipper .back {
+	transform: rotateY(180deg);
+	background-color: #f0f0f0;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+		width: 90%;
+		height: auto;
+	}
+.service_section .card2 .flipper .back .txt {
+	font-size: 16px;
+	color: #333;
+	display: flex;
+ margin-top: 30px;
+
+}
+.service_section .card2 {
+	perspective: 1000px;
+
+}
+.service_section .card2:hover .flipper{
+	transform: rotateY(180deg);
+}
+.service_section .card2 .flipper.front,.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+
+
+
+
+.service_section .card .card-img-top-2:hover {
+	transform: rotateY(180deg);
+}
 .service_section .card .card-img-top {
 	width: 50px;
 	margin: 55px auto 5px auto;
@@ -339,6 +408,8 @@ a:focus {
 	box-sizing: border-box;
 	position: relative;
 	flex-basis: 24%;
+	position: relative;
+	overflow: hidden;
 }
 
 
@@ -349,6 +420,15 @@ a:focus {
 
 .service_section .card .card-text {
 	text-align: justify;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 18px;
+	font-weight: bold;
+	color: #333;
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out;
 }
 
 
