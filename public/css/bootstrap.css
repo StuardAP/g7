@@ -4,7 +4,7 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-:root {
+ :root {
 	--blue: #007bff;
 	--indigo: #6610f2;
 	--purple: #6f42c1;
@@ -5105,14 +5105,23 @@ input[type="button"].btn-block {
 	display: flex;
 	-ms-flex-direction: column;
 	flex-direction: column;
+	width: 100%;
+	margin:0 auto;
 }
 
-.card-deck .card {
-	margin-bottom: 15px;
-}
+
+
 
 @media (min-width: 576px) {
 	.card-deck {
+		-ms-flex-flow: row wrap;
+		flex-flow: row wrap;
+		margin-right: -15px;
+		margin-left: -15px;
+		margin-bottom: 400px;
+
+	}
+	.card-deck2 {
 		-ms-flex-flow: row wrap;
 		flex-flow: row wrap;
 		margin-right: -15px;
@@ -5127,7 +5136,7 @@ input[type="button"].btn-block {
 		-ms-flex-direction: column;
 		flex-direction: column;
 		margin-right: 15px;
-		margin-bottom: 0;
+		margin-bottom: 0px;
 		margin-left: 15px;
 	}
 }
